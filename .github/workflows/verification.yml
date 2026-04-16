@@ -6,6 +6,6 @@ runs-on: ubuntu-latest
 steps:
 - uses: actions/checkout@v3
 - name: Vérifier que README.md existe
-run: test -f README.md && echo 'README présent !'
+run: test -f README.md '
 - name: Afficher la liste des fichiers
 run: ls -la
