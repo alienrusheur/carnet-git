@@ -1,0 +1,11 @@
+name: Vérification du projet
+on: [push, pull_request]
+jobs:
+verifier:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v3
+- name: Vérifier que README.md existe
+run: test -f README.md && echo 'README présent !'
+- name: Afficher la liste des fichiers
+run: ls -la
